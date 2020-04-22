@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue | List</title>
+    <script src="./../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(el,i,arr) in fruits">{{el}} ({{i}}</li>
+      </ul>
+      <hr />
+      <h3>Using template tag</h3>
+      <template v-for="(el,i) in fruits">
+        <h4>{{el}} {{i}}</h4>
+      </template>
+      <hr />
+      <h3>Looping through array of objects</h3>
+      <template v-for="el in person">
+        <h4 v-for="(val,key) in el">{{key}}: {{val}}</h4>
+      </template>
+      <hr />
+      <h3>Looping through Numbers</h3>
+      <p v-for="n in 10">{{n}}</p>
+    </div>
+    <script src="./2.list.js"></script>
+  </body>
+</html>

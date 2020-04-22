@@ -1,0 +1,13 @@
+v-if='property'
+    works like an if statement if the property is true the element gets rendered if else it os removed from the DOM rendering
+
+v-else
+    works like js else statement binding to the latest v-if above
+
+There is no else if we will have to use multiple v-if statements
+
+v-show='property'
+    Unlike v-if , v-show renders the property but sets the display as none
+
+
+If you don't want to wrap the element inside a div and condition it we can wrap inside template tag which wraps the element but dosen't get rendered in the DOM

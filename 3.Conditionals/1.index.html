@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue | Conditionals</title>
+    <script src="./../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-if="con">Can you see Me?? v-if</p>
+      <p v-else>Now you can see Me v-else</p>
+      <p>Change them</p>
+      <button @click="con=!con">Toggle</button>
+      <hr />
+      <p v-show="con">This is example for v-show</p>
+      <hr />
+      <template v-if="con">
+        <h4>This is wrapped inside a template tag</h4>
+      </template>
+    </div>
+    <script src="./1.script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+v-for='el in array'> {{el}}
+    works like for loop of js 
+    has acess to (el,i) renders the item as many times as the element exist
+
+    (el,i)
+
+v-for for objects we have acess to (value, key, index)
+
+v-for='n in 10' if we enter number it will loop through induvidual value till we get to that number
