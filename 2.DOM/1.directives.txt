@@ -1,0 +1,27 @@
+Directives are set of instructions we place in code
+
+1. v-bind:attribute = 'data.property'
+    ex- v-bing:href='link'  where link is defined in the data of vue instance
+This binds the dataproperty to the attribute
+
+
+2. v-on:event = 'methods'
+    ex- v-on:click='updateCount'
+    updateCount is defined in the methods of vue instance and is executed on each click event 
+This binds the methods to the event
+
+3. v-once 
+    It renders the data only once (first time)
+    If value changes after the rendering it dosen't update as it binds only once
+
+4.v-html="dataPropertyName"
+    dataPropertyName - holds the html elment which has to be rendered
+    To include html element which is present in the data object of vue instance, if this is not included then the html element is render as a string
+
+    @event === v-on:event
+    :attribute === v-bind
+
+5. v-model='property'
+    ex- <input  v-model='property'>
+        <p>{{property}}
+        displays the property in the input field and updates the property as input changes

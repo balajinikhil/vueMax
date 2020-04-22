@@ -1,0 +1,4 @@
+Modifiers are interupter function which gets executed before calling event handler
+
+ex - v.on:input.enter='eventHandler'
+    event will be executed when enter key is hit

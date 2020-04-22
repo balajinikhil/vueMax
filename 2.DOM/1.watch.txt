@@ -1,0 +1,13 @@
+watch 
+    Execute upon code changes, This is mainly used for executing asynchronus functions this watches for the changes and updates the properties
+
+syntax
+    watch{
+        prop(){
+            //prop - should match data property
+             let val = this
+            setTimeout(()=>{
+
+            },2000)
+        }
+    }

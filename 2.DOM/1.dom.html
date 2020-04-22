@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue | DOM</title>
+    <script src="./../vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!--  -->
+      <h3>interpolation</h3>
+      <h3>{{title}}</h3>
+      <hr />
+      <!--  -->
+      <h3>v-bind</h3>
+      <a v-bind:href="myLink">Google</a>
+      <hr />
+      <!--  -->
+      <h3>v-on</h3>
+      <button v-on:click="updateCount">Click</button>
+      <p>{{count}}</p>
+      <hr />
+      <!--  -->
+      <h3>v-html</h3>
+      <p v-html="finishedLink"></p>
+      <input type="text" v-on:input="onIpt" />
+      <hr />
+      <!--  -->
+      <h3>events</h3>
+      <p v-on:mousemove="updateCo">
+        X {{x}} | Y {{y}} -
+        <span v-on:mousemove.stop>DEAD SPOT</span>
+      </p>
+      <hr />
+      <h3>passing value</h3>
+      <input type="text" v-on:keyup.enter="alertMe" />
+      <!-- interpolation can execute js code -->
+      <hr />
+      <!--  -->
+      <h3>two way binding</h3>
+      <input type="text" v-model="model" />
+      <p>{{model}}</p>
+      <hr />
+      <!-- computed  property-->
+      <h3>Computed and watch</h3>
+      <button @click="counter++">Increment</button>
+      <button @click="counter--">Decrement</button>
+      <button @click="secondCounter++">Second Counter</button>
+      <p>{{result}}</p>
+      <!-- watch property -->
+      <h4>{{counter}} | {{secondCounter}}</h4>
+    </div>
+    <script src="./dom.js"></script>
+  </body>
+</html>

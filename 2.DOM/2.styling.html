@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue | Styling</title>
+    <script src="./../vue.js"></script>
+    <style>
+      .demo {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        display: inline-block;
+        margin: 10px;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Attaching classes -->
+    <h3>Attaching Classes</h3>
+    <div id="app">
+      <div class="demo" :class="{red: attachRed}"></div>
+      <div class="demo" v-bind:class="attachBlue"></div>
+      <div class="demo" :class="attachGreen"></div>
+      <br />
+      <input type="text" v-model="attachGreen" />
+      <button @click="attachRed = !attachRed">Change color</button>
+    </div>
+    <!-- Using style  -->
+    <h3>Using style property</h3>
+    <div id="app1">
+      <div class="demo" :style="{backgroundColor:color}"></div>
+      <div class="demo" :style="{width: changeWidth}"></div>
+      <div class="demo"></div>
+      <br />
+      <input type="text" v-model="width" />
+    </div>
+
+    <script src="./2.styling.js"></script>
+  </body>
+</html>

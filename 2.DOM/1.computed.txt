@@ -1,0 +1,36 @@
+ Without computed properties
+
+HTML
+      <h3>without Computed</h3>
+      <button type="button" @click="increment">Increment</button>
+      <button type="button" @click="decrement">Decrement</button>
+      <p>{{result}}</p>
+      <h4>{{counter}} |</h4>
+    
+JS
+    increment() {
+      this.counter++;
+      this.result = this.counter > 5 ? "Greater 5" : "lesser 5";
+    },
+    decrement() {
+      this.counter--;
+      this.result = this.counter > 5 ? "Greater 5" : "lesser 5";
+    },
+
+this becomes difficult to keep track when we have complex applications
+
+And this.result is repeted which is not a good practice
+So we can call result as a function insted 
+
+HTML
+    <button @click='counter++'>Incerement</button>
+    <button @click='counter--> Decrement</button>
+    <p>{{result()}}
+JS
+    result(){
+        return this.counter > 5 ? 'Greater than 5' : 'lesser than 5'
+    }
+
+this will also be a problem as the result method will be executed each time vue instance is rendered this will slow the application down to overcome this we have computed property
+
+computed can be used like data property inside an interpolation
